@@ -1,0 +1,45 @@
+Field/ Attribute:
+A field is a piece of information about an element. A field is represented by a column. Every field has got
+a title called the field title.
+
+
+Record (Tuple):
+A record is information about an element such as a person, student, an employee, client, etc. A record
+can have much information in different heading or titles.
+
+
+Table:
+A table isthe arrangements ofrows and columns. Each table must have unique name andmust be simple.
+It is the place where data and information are stored.
+
+
+Objects:
+Database Objects are the essential tools of relational database. These database objects helps to store,
+view, edit and manipulate the data and information stored in database.
+
+
+
+It can be used to hold and manipulate the data. Some of the examples of database objects are view,
+sequence, indexes, form, query report etc.
+
+
+ Table: Basic unit of storage; composed rows and columns
+
+ View: Logically represents subsets of data from one or more tables
+ Sequence: Generates primary key values
+ Index: Improves the performance ofsome queries
+ Synonym: Alternative name for an object
+Some Basic Terms used in Database
+ Schema: A schema isthe structure of database which defines name of tables, data fields with data
+types, relationships and constraints.
+ Instance: It defines data values in a record.
+ Entity: An entity is a thing or object in the real world that is different from other objects.
+ Attribute: Attribute is properties possessed by an entity orrelationship.
+ Index: It is used to create indexes in database. It helps searching and sorting operation faster and
+improves the performances of queries.
+ Query: It isthe object of DBMS which is mainly used to extract and upgrade the necessary records
+that are present in the database.
+ Form: It is object of database which is mainly used for data entry. It is easy to add, modify and
+delete the records in form.
+ Report: Report are the printed output that is created from table or query. We can't add, modify
+and delete the records in report.
