@@ -56,10 +56,10 @@ ALTER TABLE teacher ADD COLUMN email VARCHAR(100);
 ALTER TABLE teacher MODIFY COLUMN name VARCHAR(100);
 
 
-:---Creating a foreign key on teacher table
-
-ALTER TABLE teacher ADD CONSTRAINT FK_principal FOREIGN KEY (principal_id) REFERENCES principal(id);
-
+:-Adding a foreign key on existing teacher table
+ALTER TABLE Teacher
+ADD COLUMN principal_id INT(10),
+ADD FOREIGN KEY (principal_id) REFERENCES principall(id);
 
 
 :--Composite key(2 primary key)
