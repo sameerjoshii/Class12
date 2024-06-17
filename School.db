@@ -1,0 +1,117 @@
+School Database 
+
+CREATE TABLE principal (
+    id INT(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    address VARCHAR(100) NOT NULL
+);
+
+
+
+
+
+CREATE TABLE teacher (
+    id INT(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    subject VARCHAR(30) NOT NULL,
+    principal_id INT(10),
+    FOREIGN KEY (principal_id) REFERENCES principal(id)
+);
+
+
+
+
+INSERT INTO principal (name, address) VALUES
+('Principal A', 'Address 1'),
+('Principal B', 'Address 2');
+
+
+
+
+
+INSERT INTO teacher (name, subject, principal_id) VALUES
+('Teacher 1', 'Math', 1),
+('Teacher 2', 'Science', 1),
+('Teacher 3', 'English', 2);
+
+
+
+
+DROP TABLE teacher;
+
+
+DELETE FROM teacher WHERE id = 1;
+
+
+
+
+UPDATE teacher SET name = 'Updated Teacher', subject = 'Updated Subject' WHERE id = 2;
+
+
+
+
+ALTER TABLE teacher ADD COLUMN email VARCHAR(100);
+
+
+ALTER TABLE teacher MODIFY COLUMN name VARCHAR(100);
+
+
+:---Creating a foreign key on teacher table
+
+ALTER TABLE teacher ADD CONSTRAINT FK_principal FOREIGN KEY (principal_id) REFERENCES principal(id);
+
+
+
+:--Composite key(2 primary key)
+
+CREATE TABLE Classroom (
+    class_id INT(10) NOT NULL,
+    teacher_id INT(10) NOT NULL,
+    room_number VARCHAR(10) NOT NULL,
+    PRIMARY KEY (class_id, teacher_id)
+);
+
+
+
+
+
+:--Composite keys as foreign key
+
+CREATE TABLE Enrollments (
+    student_id INT(10) NOT NULL,
+    course_id INT(10) NOT NULL,
+    semester VARCHAR(6) NOT NULL,
+    PRIMARY KEY (student_id, course_id),
+    FOREIGN KEY (student_id) REFERENCES Students(id),
+    FOREIGN KEY (course_id) REFERENCES Courses(id)
+);
+
+
+:-Adding foreign key in already built table
+
+ALTER TABLE Teacher
+ADD COLUMN principal_id INT(10),
+ADD FOREIGN KEY (principal_id) REFERENCES principal(id);
+
+
+:-renaming a table
+RENAME TABLE principal TO principall;
+
+
+
+Alias:---
+
+ An alias is a temporary name given to a table or column for the duration of a specific SQL query. Aliases are useful for making column names more readable, shortening lengthy table name
+
+
+
+SELECT Teacher.name AS TeacherName, Teacher.subject AS Subject
+FROM Teacher;
+
+
+In this query:
+:-Teacher.name is given the alias TeacherName.
+:-Teacher.subject is given the alias Subject.
+
+
+
