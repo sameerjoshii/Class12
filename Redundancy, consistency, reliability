@@ -1,0 +1,42 @@
+Data Redundancy in Database
+
+Data redundancy in databases occurs when the same piece of data is stored in multiple places within a database or across multiple databases. While some level of redundancy is often necessary for backup and recovery purposes, excessive redundancy can lead to various issues.
+
+Types of Data Redundancy
+
+1. Unintentional Redundancy: A customer's address stored in both the customer information table and the order details table. If the customer changes their address, both tables need to be updated. If only one table is updated, it leads to data inconsistency.
+
+2. Intentional Redundancy:In a distributed database, data might be intentionally duplicated across different servers to improve access speed and reliability. This type of redundancy is often managed carefully to avoid inconsistency.
+
+
+
+
+
+Reliability
+
+Reliability refers to the ability of a system or component to consistently perform its intended functions without failure over a specified period. In the context of data and systems, reliability ensures that the system remains operational and the data is accessible whenever needed.
+
+Example:
+A cloud storage service that guarantees 99.9% uptime ensures that users can access their files almost all the time. This high level of reliability is crucial for users who depend on constant access to their data.
+
+
+
+
+
+
+Data Inconsistency
+
+Data inconsistency occurs when the same piece of data exists in multiple places but is not consistent across those locations. This can lead to errors and confusion as different sources provide conflicting information.
+
+Example:
+Imagine a company's customer database where a customer's address is stored in two different systems. If one system is updated with the customer's new address but the other system still has the old address, this inconsistency can cause issues such as sending mail to the wrong address.
+
+
+
+Data Integrity
+
+Data integrity refers to the accuracy, consistency, and reliability of data throughout its lifecycle. Ensuring data integrity means that data remains correct and consistent when it is entered, stored, and retrieved.
+
+Example:
+A bank ensures data integrity by implementing rules that a customer's account balance cannot be negative. This prevents errors and ensures the financial data is accurate and reliable.
+
