@@ -1,0 +1,26 @@
+Normalization is a database design process used to organize a database into tables and columns. The goal is to reduce redundancy and dependency by ensuring that each table contains data related to a single entity. The process involves dividing large tables into smaller ones and defining relationships between them.
+Here are the rules and definitions for the first three normal forms (1NF, 2NF, 3NF)
+
+:First Normal Form (1NF)Definition: A table is in 1NF if:It contains only atomic (indivisible) values.Each column contains values of a single type.Each column contains unique values.
+
+
+
+Second Normal Form (2NF)Definition: A table is in 2NF if:It is in 1NF.All non-key attributes are fully functional dependent on the primary key.
+
+
+
+
+Third Normal Form (3NF)Definition: A table is in 3NF if:It is in 2NF.All the attributes are functionally dependent only on the primary key
+
+
+
+
+
+Redundancy: The subject information is repeated for each student in the same class.
+
+Update Anomalies: If a subject changes, you have to update it in multiple rows. If you forget to update one, the data becomes inconsistent.
+
+Insertion Anomalies: You cannot add a subject unless there is at least one student enrolled in that class.
+
+
+Deletion Anomalies: If you delete the last student from a class, you also lose the information about the subjects of that class.
