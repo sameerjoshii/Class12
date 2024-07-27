@@ -1,0 +1,120 @@
+Types of Database Models
+
+ 1. Relational Database Model (RDBMS)**
+A Relational Database Management System (RDBMS) organizes data into tables (rows and columns). Each table represents an entity (like customers or orders), and each row is a unique record. Tables can be linked by keys, allowing for efficient data retrieval. SQL (Structured Query Language) is commonly used to manage and query relational databases. The relational model is popular due to its simplicity and ability to handle a wide range of applications, from simple data storage to complex transactions.
+
+**Example:** MySQL, PostgreSQL, Oracle Database.
+
+**Benefits:**
+- Data Integrity: Ensures accuracy and consistency.
+- Flexibility: Can handle various types of data relationships.
+- Scalability: Suitable for large datasets.
+
+**Drawbacks:**
+- Complexity: Can be complex to design for very large systems.
+- Performance: May not be as fast as other models for specific types of queries.
+
+#### 2. **Object-Oriented Database Model**
+Object-Oriented Databases (OODBMS) store data as objects, similar to object-oriented programming. Each object contains data and methods, and objects can inherit properties from other objects. This model is ideal for applications requiring complex data representations, like CAD systems or multimedia databases.
+
+**Example:** db4o, ObjectDB.
+
+**Benefits:**
+- Intuitive: Matches the object-oriented programming paradigm.
+- Reusability: Objects can be reused across different applications.
+- Flexibility: Suitable for complex data structures.
+
+**Drawbacks:**
+- Complexity: More complex to design and implement than relational databases.
+- Performance: Can be slower for simple queries compared to RDBMS.
+
+#### 3. **Network Database Model**
+The Network Database Model allows more complex relationships by using a graph structure with nodes (entities) and edges (relationships). Each record can have multiple parent and child records, forming a network.
+
+**Example:** Integrated Data Store (IDS), IDMS.
+
+**Benefits:**
+- Flexibility: Can handle more complex relationships than hierarchical models.
+- Efficiency: Efficient for certain types of queries and relationships.
+
+**Drawbacks:**
+- Complexity: More complex to design and manage.
+- Less Popular: Less common than RDBMS and requires specialized knowledge.
+
+#### 4. **Hierarchical Database Model**
+The Hierarchical Database Model organizes data in a tree-like structure. Each parent record can have multiple child records, but each child has only one parent. This model is simple and efficient for certain types of data relationships.
+
+**Example:** IBM Information Management System (IMS).
+
+**Benefits:**
+- Simplicity: Easy to understand and implement for hierarchical data.
+- Performance: Efficient for specific types of queries.
+
+**Drawbacks:**
+- Rigidity: Difficult to adapt to changes in data structure.
+- Limited Relationships: Can’t handle complex many-to-many relationships well.
+
+---
+
+### Database Languages
+
+#### 1. **Data Definition Language (DDL)**
+DDL is used to define and manage database structures, such as tables, indexes, and schemas. Common DDL commands include `CREATE`, `ALTER`, and `DROP`.
+
+**Example Commands:**
+- `CREATE TABLE students (id INT, name VARCHAR(100));`
+- `ALTER TABLE students ADD COLUMN age INT;`
+- `DROP TABLE students;`
+
+**Benefits:**
+- Structure: Defines the database schema and its components.
+- Integrity: Helps maintain data integrity by enforcing rules.
+
+**Drawbacks:**
+- Static: Changes in structure require modifications to DDL.
+
+#### 2. **Data Manipulation Language (DML)**
+DML is used to manipulate data within the database. It includes commands like `SELECT`, `INSERT`, `UPDATE`, and `DELETE`.
+
+**Example Commands:**
+- `SELECT * FROM students;`
+- `INSERT INTO students (id, name) VALUES (1, 'John Doe');`
+- `UPDATE students SET name = 'Jane Doe' WHERE id = 1;`
+- `DELETE FROM students WHERE id = 1;`
+
+**Benefits:**
+- Flexibility: Allows for data retrieval and manipulation.
+- Efficiency: Facilitates efficient data handling.
+
+**Drawbacks:**
+- Integrity: Incorrect use can lead to data inconsistencies.
+
+---
+
+### Types of Databases
+
+#### 1. **Distributed Database**
+A Distributed Database spreads data across multiple physical locations, either within the same network or across different networks. Each location is called a site or node.
+
+**Example:** Apache Cassandra, Google Cloud Spanner.
+
+**Benefits:**
+- Availability: Data is available even if one site fails.
+- Performance: Can handle large volumes of data and high transaction loads.
+
+**Drawbacks:**
+- Complexity: More complex to manage and synchronize.
+- Latency: Potential for increased latency due to data distribution.
+
+#### 2. **Centralized Database**
+A Centralized Database stores all data at a single location. This location can be accessed by users and applications from different locations.
+
+**Example:** Mainframe databases.
+
+**Benefits:**
+- Simplicity: Easier to manage and secure.
+- Consistency: Ensures data consistency since all data is in one place.
+
+**Drawbacks:**
+- Bottlenecks: Single point of failure can lead to system-wide issues.
+- Scalability: Limited by the capacity of the central site.
