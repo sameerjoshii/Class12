@@ -1,0 +1,21 @@
+<html>
+<center>
+<p> Adding Two Numbers </p>
+
+<input type="number" placeholder="Enter first number" id="syau">
+
+<input type="number" placeholder="Enter second number" id="suntala"> <br> <br>
+
+<input type="submit" value="Add" onclick="computerpadhneharu()">
+<p id="result"></p>
+</center>
+
+<script>
+function computerpadhneharu() {
+    var a = (document.getElementById("syau").value);
+    var b = (document.getElementById("suntala").value);
+    var sum = a + b;
+    document.getElementById("result").innerHTML = "Sum of two numbers is: " + sum;
+}
+</script>
+</html>
