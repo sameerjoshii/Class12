@@ -1,0 +1,21 @@
+<html>
+<title>facebook</title>
+<label>username</label> <br>
+<input type="text" id="a"> <br>
+<label>password</label> <br>
+<input type="password" id="b"> <br>
+<input type="submit" value="login" onclick="class12()">
+
+<script>
+function class12() {
+    var user = document.getElementById("a").value;
+    var pass = document.getElementById("b").value;
+
+    if (user == "ram" && pass == "1234") {
+        document.write("Your username and password are correct");
+    } else {
+        document.write("Your username and password are incorrect");
+    }
+}
+</script>
+</html>
