@@ -1,0 +1,43 @@
+// Creating an array
+let fruits = ['Apple', 'Banana', 'Cherry'];
+
+// Accessing elements in the array
+console.log(fruits[0]); // Output: Apple
+console.log(fruits[1]); // Output: Banana
+
+// Adding elements to the array
+fruits.push('Orange');
+console.log(fruits); // Output: ['Apple', 'Banana', 'Cherry', 'Orange']
+
+// Removing the last element from the array
+fruits.pop();
+console.log(fruits); // Output: ['Apple', 'Banana', 'Cherry']
+
+// Finding the length of the array
+console.log(fruits.length); // Output: 3
+
+// Iterating over an array
+for (let i = 0; i < fruits.length; i++) {
+  console.log(fruits[i]);
+}
+
+// Using forEach to iterate over an array
+fruits.forEach(function(fruit) {
+  console.log(fruit);
+});
+
+// Modifying elements in the array
+fruits[1] = 'Blueberry';
+console.log(fruits); // Output: ['Apple', 'Blueberry', 'Cherry']
+
+// Finding an element in the array
+let index = fruits.indexOf('Cherry');
+console.log(index); // Output: 2
+
+// Removing an element by index
+fruits.splice(index, 1);
+console.log(fruits); // Output: ['Apple', 'Blueberry']
+
+// Checking if an array includes a certain element
+console.log(fruits.includes('Apple')); // Output: true
+console.log(fruits.includes('Orange')); // Output: false
