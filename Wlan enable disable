@@ -1,0 +1,13 @@
+# Enable the WiFi adapter
+Enable-NetAdapter -Name $wifiAdapter.Name -Confirm:$false
+
+
+
+
+
+
+# Get the name of the WiFi adapter
+$wifiAdapter = Get-NetAdapter | Where-Object {$_.Name -like "*Wi-Fi*"}
+
+# Disable the WiFi adapter
+Disable-NetAdapter -Name $wifiAdapter.Name -Confirm:$false
